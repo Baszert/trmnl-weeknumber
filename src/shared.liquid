@@ -13,53 +13,55 @@
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
 
 <style>
-  .layout {
+  /* Scoped to .weeknumber-plugin so these don't leak into other plugins in a mashup.
+     Some helpers sit on the root itself, hence both ".x.y" and ".x .y". */
+  .weeknumber-plugin {
     font-family: "Google Sans Flex";
   }
 
-  .relative {
+  .weeknumber-plugin.relative, .weeknumber-plugin .relative {
     position: relative;
   }
 
-  .absolute {
+  .weeknumber-plugin .absolute {
     position: absolute;
   }
 
-  .top--0 {
+  .weeknumber-plugin .top--0 {
     top: 0;
   }
 
-  .left--0 {
+  .weeknumber-plugin .left--0 {
     left: 0;
   }
 
-  .z--1 {
+  .weeknumber-plugin .z--1 {
     z-index: 1;
   }
 
-  .z--2 {
+  .weeknumber-plugin .z--2 {
     z-index: 2;
   }
 
-  .text--bold {
+  .weeknumber-plugin .text--bold {
     font-weight: bold;
   }
 
-  .overflow--hidden {
+  .weeknumber-plugin.overflow--hidden, .weeknumber-plugin .overflow--hidden {
     overflow: hidden;
   }
 
-  .text--uppercase {
+  .weeknumber-plugin .text--uppercase {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     line-height: 1em;
   }
 
-  .font--bold {
+  .weeknumber-plugin .font--bold {
     font-weight: bold !important;
   }
 
-  .blend--difference {
+  .weeknumber-plugin .blend--difference {
     mix-blend-mode: difference;
   }
 </style>
