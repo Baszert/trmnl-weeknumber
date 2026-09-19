@@ -1,32 +1,18 @@
-# Week Number Plugin for TRMNL
+# Week Number
 
-This plugin displays the current week number on your TRMNL device. It features a dynamic background that acts as a progress bar, visualizing how much of the year has passed.
+What week is it? A big week number, with a progress bar in the background that fills up as the year goes by.
 
-<a href="https://usetrmnl.com/recipes/216687">
-  <img src="https://usetrmnl.com/images/brand/badges/dark/show-it-on-trmnl/trmnl-badge-show-it-on-dark.svg" alt="TRMNL Badge" width="120">
-</a>
+<a href="https://trmnl.com/recipes/216687"><img width="150" alt="Works with TRMNL" src="https://trmnl.com/images/brand/badges/light/works-with-trmnl/trmnl-badge-works-with-light.svg" /></a>
 
-## Features
+No settings: ISO week number in your TRMNL account timezone.
 
--   **Current Week Display**: Clearly shows the current week number.
--   **Year Progress Bar**: The background fills up from left to right as the year progresses.
--   **High Contrast**: Uses `mix-blend-mode: difference` to ensure the text remains legible (inverting colors) as the background fills behind it.
--   **Responsive Layouts**: Supports all TRMNL layouts:
-    -   Full
-    -   Half Horizontal
-    -   Half Vertical
-    -   Quadrant
+### Develop locally
 
-## How it Works
+Templates and settings live in [`src/`](src/), ready for [trmnlp](https://github.com/usetrmnl/trmnlp):
 
-The plugin uses Liquid templating to calculate the current week number from the system time (`trmnl.system.timestamp_utc`). It then calculates the percentage of the year passed (current week / 52) and uses this percentage to set the width of the background overlay.
+```sh
+gem install trmnl_preview
+trmnlp serve
+```
 
-## Installation
-
-1.  Create a new private plugin on your TRMNL dashboard.
-2.  Copy the contents of the `.liquid` files into the corresponding layout sections in the Edit Plugin view.
-3.  Copy the contents of `shared.liquid` into the "Shared" tab within the CSS/JS section.
-
-## Configuration
-
-No special configuration is required. The plugin automatically uses the current UTC timestamp provided by the TRMNL system.
+Questions or ideas? trmnl@achtnegen.nl or @Bastronautica on Discord.
