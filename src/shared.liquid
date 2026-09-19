@@ -1,4 +1,5 @@
-{% assign current_timestamp = trmnl.system.timestamp_utc %}
+{% comment %} Local time, so the week flips at the user's Monday 00:00, not UTC {% endcomment %}
+{% assign current_timestamp = trmnl.system.timestamp_utc | plus: trmnl.user.utc_offset %}
 {% assign current_week = current_timestamp | date: "%V" | plus: 0 %}
 {% assign total_weeks = 52.0 %}
 {% assign progress_pct = current_week | divided_by: total_weeks | times: 100 %}
