@@ -37,7 +37,7 @@ custom_fields:
   description: How far are we in the year? Well simple. The progressbar in the background will be filled in the further we are in the year. And to keep it simple, you see the current weeknumber.
   category: calendar
   email_address: trmnl@achtnegen.nl
-  github_url: https://github.com/Bastronautik/trmnl-weeknumber
+  github_url: https://github.com/Baszert/trmnl-weeknumber
 name: Week Number
 description: What week?
 refresh_interval: 1440
